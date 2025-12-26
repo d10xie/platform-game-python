@@ -61,13 +61,13 @@ class Level:
                     y = row_index * tile_size
 
                     if type == 'terrain':
-                        terrain_tile_list = import_cut_graphics('C:/Users/PR103/Desktop/mb/graphics/terrain/terrain_tiles.png')
+                        terrain_tile_list = import_cut_graphics('../graphics/terrain/terrain_tiles.png')
                         tile_surface = terrain_tile_list[int(val)]
                         sprite = StaticTile(tile_size,x,y,tile_surface)
                         sprite_group.add(sprite)
 
                     if type == 'grass':
-                        grass_tile_list = import_cut_graphics('C:/Users/PR103/Desktop/mb/graphics/decoration/grass/grass.png')
+                        grass_tile_list = import_cut_graphics('../graphics/decoration/grass/grass.png')
                         tile_surface = grass_tile_list[int(val)]
                         sprite = StaticTile(tile_size,x,y,tile_surface)
 
@@ -76,18 +76,18 @@ class Level:
 
                     if type == 'coins':
                         if val == '0':
-                            sprite = Coin(tile_size,x,y,'C:/Users/PR103/Desktop/mb/graphics/coins/gold')
+                            sprite = Coin(tile_size,x,y,'../graphics/coins/gold')
                         if val == '1':
-                            sprite = Coin(tile_size,x,y,'C:/Users/PR103/Desktop/mb/graphics/coins/silver')
+                            sprite = Coin(tile_size,x,y,'../graphics/coins/silver')
 
                     if type == 'fg palms':
                         if val =='0':
-                            sprite = Palm(tile_size,x,y,'C:/Users/PR103/Desktop/mb/graphics/terrain/palm_small',38)
+                            sprite = Palm(tile_size,x,y,'../graphics/terrain/palm_small',38)
                         if val =='1':
-                            sprite = Palm(tile_size,x,y,'C:/Users/PR103/Desktop/mb/graphics/terrain/palm_large',64)
+                            sprite = Palm(tile_size,x,y,'../graphics/terrain/palm_large',64)
 
                     if type == 'bg palms':
-                        sprite = Palm(tile_size,x,y,'C:/Users/PR103/Desktop/mb/graphics/terrain/palm_bg',64)
+                        sprite = Palm(tile_size,x,y,'../graphics/terrain/palm_bg',64)
 
                     if type == 'enemies':
                         sprite= Enemy(tile_size,x,y)
@@ -201,7 +201,7 @@ class Level:
                     sprite = Player((x,y),self.display_surface,self.create_jump_particles)
                     self.player.add(sprite)
                 if val == '1':
-                    hat_surface = pygame.image.load('C:/Users/PR103/Desktop/mb/graphics/character/hat.png').convert_alpha()
+                    hat_surface = pygame.image.load('../graphics/character/hat.png').convert_alpha()
                     sprite = StaticTile(tile_size,x,y,hat_surface)
                     self.goal.add(sprite)
 

@@ -32,7 +32,7 @@ class Player(pygame.sprite.Sprite):
         self.on_right = False
 
     def import_character_assets(self):
-        character_path= 'C:/Users/PR103/Desktop/mb/graphics/character/' 
+        character_path= '../graphics/character/'
         self.animations={'idle':[],'run':[],'jump':[],'fall':[]}
 
         for animation in self.animations.keys():
@@ -40,7 +40,7 @@ class Player(pygame.sprite.Sprite):
             self.animations[animation] = import_folder(full_path)
 
     def import_dust_run_particles(self):
-        self.dust_run_particles = import_folder(r'C:\Users\PR103\Desktop\mb\graphics\character\dust_particles\run')#todo zmienić odniesienie do sciezki
+        self.dust_run_particles = import_folder(r'..\graphics\character\dust_particles\run')#todo zmienić odniesienie do sciezki
 
     def animate(self):
         animation = self.animations[self.status]
